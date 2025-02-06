@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#toggleButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 50px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu ul li:first-child a {
+    font-weight: bold; /* Makes "Главное" bolder */
+    background-color: #555; /* Adds background color to the first item */
+    padding-left: 30px; /* Adds extra padding to the first item */
+}
+
+.expandable-content {
+    display: none; /* Initially hidden */
+    background-color: #444;
+    padding: 20px;
+    margin-top: 10px; /* Gives space between the menu and content */
+}
+
+.menu .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu.open {
+    transform: translateX(0);
+    display: block;
+}
