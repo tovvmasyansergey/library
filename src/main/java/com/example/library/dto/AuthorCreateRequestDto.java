@@ -7,5 +7,18 @@ public record AuthorCreateRequestDto(
         String name,
         String surname,
         String email
+
+
+
+
+
+
+
+
+
+
+
+
+
 ) {
 }
