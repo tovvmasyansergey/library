@@ -36,6 +36,8 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/user/auth").permitAll()
                         .requestMatchers(HttpMethod.POST, "/user/register").permitAll()
+                        .requestMatchers("/book/**").permitAll() // Разрешить доступ к /book
+
 //                        .requestMatchers(HttpMethod.GET, "/author/**").authenticated()
                       //  .requestMatchers(HttpMethod.POST, "/author/**").hasAnyAuthority("ADMIN")
                         .anyRequest().authenticated()
